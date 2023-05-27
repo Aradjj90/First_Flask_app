@@ -1,1 +1,41 @@
+{% extends 'base.html' %}
 
+{% block title -%}
+    <title>{{title}}</title>
+{% endblock title %}
+
+{% block content %}
+{{super()}}
+<h2 align="center">My first Flask program </h2>
+<h3 align="center">With a focus on fruit dishes</h3>
+
+<div class="general">
+<div class="opportunities" align="left">
+<h4> Opportunities in the program:</h4>
+<ul>
+    <li> &malt; Header with double menu. One for registered users, the second for non-registered users. </li>
+    <li> &malt; The logo links to the flask documentation for easier learning of the framework. </li>
+    <li> &malt; You can upload your avatar in your profile</li>
+    <li> &malt; All your registration information you can see in the user profile</li>
+    <li> &malt; Static footer. With links to social networks and GitHub.</li>
+    <li> &malt; 'First page' This is one of the pages of the site. From the page you will be able to go to sites with recipes on request.</li>
+    <li> &malt; Add DB sqlite to store registered users. </li>
+    <li> &malt; You can get access to the 'First page' and Contacts when you log in. </li>
+    <li> &malt; You can see all the code on the GitHub</li>
+
+</ul>
+    <br>
+</div>
+
+<div class="solutions" >
+<h4>Software solutions:</h4>
+    <p> &Sc; The functionality of the program is written using Python and the Flask mini-framework. </p>
+    <p> &Sc; The werkzeug library is used to encrypt passwords</p>
+    <p> &Sc; Connect to the database with SQLAlchemy</p>
+    <p> &Sc; BD - SQLite</p>
+    <p> &Sc; All information about users is in the database</p>
+    <p> &Sc; By default, the simple avatar is loaded. You can change to your own </p>
+    <p> &Sc; Used my training HTML pages and CSS tables </p>
+</div>
+    </div>
+{% endblock content %}

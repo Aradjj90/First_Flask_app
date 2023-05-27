@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+ .screen_saver{
+    display: flex;
+    justify-content: space-between;
+    margin: 9% 2% 0 2%;
+ }
+.screen_saver img {height: 34vh;}
+
+</style>
+{% endblock style %}
+
+
+{% block title -%}
+    <title>{{title}}</title>
+{% endblock title %}
+
+{% block content %}
+{{super()}}
+<h1 align="center" >Here you can find</h1>
+ <div class="screen_saver">
+     <img src='/static/images/Home page/Flask.png' alt="Flask">
+     <img src='/static/images/Home page/Python.png' alt="Python">
+     <img src='/static/images/Home page/dish.png' alt="dish">
+ </div>
+
+{% endblock %}

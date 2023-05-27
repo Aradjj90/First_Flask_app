@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super()}}
+{% for cat,msg in get_flashed_messages(True) %}
+  <div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<h1 align="center"> Your profile</h1>
+
+<table border="0" class="profile-table">
+    <tr><td valign="top">
+        <div class="profile-ava"><img src="{{url_for('userava')}}"></div>
+        <div class="profile-load">
+            <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+                <p> <input type ="file" name = "file"></p>
+                <p> <input type="submit" value="Load up"></p>
+            </form>
+        </div>
+    </td>
+    <td valign="top" class="profile-panel">
+        <p><a href = "{{url_for('logout')}}">Log out of the profile</a></p>
+        <ul class="profile-info">
+            <li> Name : {{session.get('name')}}</li>
+            <li>Email : {{session.get('email')}}</li>
+            <li> Registration date : {{session.get('date')}} </li>
+        </ul>
+    </td>
+    </tr>
+</table>
+{% endblock content %}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/base.css')}}">
+    {% block style %}
+    {% endblock style %}
+{% block title -%}
+    <title>{{title}}</title>
+{% endblock title %}
+
+</head>
+<body>
+<header>
+    <div class="header_main">
+        <a href="https://flask.palletsprojects.com/en/2.3.x/" target="_blank" class="logo">Flask</a>
+        <nav>
+            <ul>
+                 {% for m in menu -%}
+                    {% if "Login" in m.title or "Logout" in m.title -%}
+                        <li><a class="log" href="{{m.url}}">{{m.title}}</a></li>
+                    {% else %}
+                        <li><a href="{{m.url}}">{{m.title}}</a></li>
+                    {% endif %}
+                {% endfor -%}
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+{% block content -%}
+
+
+{% endblock content %}
+
+
+<footer>
+    <ul class="ref_foot" style="float: center">
+        <li><a href="mailto:aradjj@ukr.net">Write me</a></li>
+        <li><a href="https://github.com/Aradjj90/First_Flask_app" target="_blank">GitHub </a> </li>
+    </ul>
+    <hr align="left" width="100%" size =1>
+
+    <div class="bottom_footer">
+        <span> &copy; All rights reserved </span> <!--style="float:left;" -->
+
+        <div class="social-icon">
+            <a href="https://uk-ua.facebook.com/" class="fb" target="_blank" rel="nofollow">
+                <svg width="24" height="24" viewBox="0 0 64 64">
+                    <g>
+                        <path id="svg_1" d="m64,15.422c0,-8.482 -6.939,-15.422 -15.421,-15.422l-33.157,0c-8.482,0 -15.422,6.94 -15.422,15.422l0,33.156c0,8.483 6.94,15.422 15.422,15.422l33.157,0c8.482,0 15.421,-6.939 15.421,-15.422l0,-33.156z" fill="#1559B0"></path>
+                        <path id="svg_2" d="m22.602,25.406l4.027,0l0,-1.828l0,-1.79l0,-0.298c0,-1.724 0.045,-4.387 1.298,-6.035c1.32,-1.745 3.133,-2.932 6.251,-2.932c5.079,0 7.221,0.724 7.221,0.724l-1.008,5.968c0,0 -1.678,-0.485 -3.244,-0.485s-2.969,0.56 -2.969,2.126l0,0.635l0,2.088l0,1.828l6.422,0l-0.447,5.825l-5.975,0l0,20.245l-7.549,0l0,-20.246l-4.027,0l0,-5.825l0,0z" fill="#FFFFFF"></path>
+                    </g>
+                </svg>
+            </a>     <!-- https://www.youtube.com/   https://www.instagram.com/ -->
+            <a href="https://www.youtube.com" class="yo" target="_blank" rel="nofollow">
+                <svg width="24" height="24" viewBox="0 0 64 64">
+                    <!-- код під питанням -->
+                <linearGradient y2="0.5" x2="1" y1="0.5" x1="0" id="SVGID_1_">
+                    <stop stop-color="#E52D27" offset="0"></stop>
+                    <stop stop-color="#BF171D" offset="1"></stop>
+                </linearGradient>
+                    <!-- ??? -->
+                    <g>
+                        <path id="svg_1" d="m15.421,0c-8.481,0 -15.421,6.94 -15.421,15.421l0,33.157c0,8.483 6.94,15.422 15.421,15.422l33.158,0c8.482,0 15.421,-6.939 15.421,-15.422l0,-33.157c0,-8.481 -6.939,-15.421 -15.421,-15.421l-33.158,0z" fill="url(#SVGID_1_)"></path>
+                        <path d="m27.532,37.611l11.688,-6.056l-11.688,-6.099l0,12.155z" fill="url(#Triangle_1_)" id="Triangle"></path>
+                        <path d="m27.532,25.457l10.25,6.844l1.438,-0.746l-11.688,-6.098z" fill="#420000" clip-rule="evenodd" fill-rule="evenodd" opacity="0.12" id="The_Sharpness"></path>
+                        <path id="svg_2" d="m53.196,23.351c0,0 -0.423,-2.981 -1.72,-4.293c-1.645,-1.723 -3.489,-1.731 -4.334,-1.832c-6.054,-0.438 -15.134,-0.438 -15.134,-0.438l-0.018,0c0,0 -9.08,0 -15.134,0.438c-0.846,0.101 -2.688,0.109 -4.334,1.832c-1.297,1.313 -1.719,4.293 -1.719,4.293s-0.433,3.5 -0.433,7.001l0,3.282c0,3.5 0.433,7.001 0.433,7.001s0.422,2.98 1.719,4.293c1.646,1.724 3.807,1.669 4.77,1.85c3.461,0.33 14.708,0.434 14.708,0.434s9.089,-0.015 15.143,-0.452c0.845,-0.101 2.689,-0.108 4.334,-1.832c1.297,-1.313 1.72,-4.293 1.72,-4.293s0.432,-3.501 0.432,-7.001l0,-3.282c-0.001,-3.5 -0.433,-7.001 -0.433,-7.001zm-25.662,14.26l-0.002,-12.155l11.688,6.099l-11.686,6.056z" fill="#FFFFFF"></path>
+                    </g>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/" class="in" target="_blank" rel="nofollow">
+                <svg x="0px" y="0px" width="24px" height="24px" viewBox="32 32 64 64" enable-background="new 32 32 64 64" xml:space="preserve">
+                    <g>
+                        <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="-565.1655" y1="-179.6177" x2="-517.6533" y2="-111.7632" gradientTransform="matrix(1 0 0 -1 605.4102 -81.6914)">
+                            <stop offset="0" style="stop-color:#FFB900"></stop>
+                            <stop offset="1" style="stop-color:#9100EB"></stop>
+                        </linearGradient><path fill="url(#SVGID_10_)" d="M96,88c0,4.4-3.6,8-8,8H40c-4.4,0-8-3.6-8-8V40c0-4.4,3.6-8,8-8h48c4.4,0,8,3.6,8,8V88z"></path>
+                        <g>
+                            <g>
+                                <path fill="#FFFFFF" d="M75,88H53c-7.168,0-13-5.832-13-13V53c0-7.168,5.832-13,13-13h22c7.168,0,13,5.832,13,13v22
+C88,82.168,82.168,88,75,88z M53,44c-4.962,0-9,4.038-9,9v22c0,4.963,4.038,9,9,9h22c4.963,0,9-4.037,9-9V53c0-4.962-4.037-9-9-9
+H53z"></path>
+                            </g>
+                            <g>
+                                <path fill="#FFFFFF" d="M64,76c-6.617,0-12-5.384-12-12c0-6.617,5.383-12,12-12c6.616,0,12,5.383,12,12
+C76,70.616,70.616,76,64,76z M64,56c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S68.411,56,64,56z"></path>
+                            </g>
+                            <g>
+                                <circle fill="#FFFFFF" cx="76.75" cy="51.25" r="2.75"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <span> &lt; The site administration is not responsible for your health! &gt; </span> <!--style="float:right" -->
+    </div>
+
+</footer>
+</body>
+</html>

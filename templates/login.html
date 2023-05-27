@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+ {% block style %}
+  {{super()}}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login_register.css')}}">
+ {% endblock style %}
+
+{% block title -%}
+    <title>{{title}}</title>
+{% endblock title %}
+
+{% block content -%}
+<div class="log_reg_body">
+    {% for cat,msg in get_flashed_messages(True) %}
+  <div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+  <div class="wrapper">
+    <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form action="" method="post">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" name="email" value="" required> <!--вияснити -->
+          <label>Email</label> <!--вияснити -->
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" name="psw" value="" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p> Don`t have an account? <a href="{{url_for('register')}}" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <!--<script scr="script.js"></script> -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</div>
+{% endblock content %}

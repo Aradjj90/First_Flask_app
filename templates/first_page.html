@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+ {% block style %}
+  {{super()}}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css')}}">
+
+    <style>
+         aside ul li span {
+        float:right;
+        }
+    </style>
+   {% endblock style %}
+
+{% block title -%}
+    <title>{{title}}</title>
+{% endblock title %}
+
+{% block content -%}
+<div class="page">
+    <aside class="aside_left"></aside>
+
+    <main class="main">
+        <div class="h_2">
+            <h2>Опис страви </h2>
+        </div>
+
+        <div class="fill_text">
+            <p>Шматочки бананів і печива, вкриті ніжним заварним кремом та прикрашені збитими вершками чи кулькою морозива,
+            — це знаменитий банановий пудинг.</p>
+            <p> Рецепт цього оригінального десерту вигадали в південних штатах Америки лише століття тому.
+            Однак він настільки полюбився публіці, що сьогодні його подають у кафе й ресторанах по всьому світу. </p>
+            <p>Зазвичай до складу бананового пудингу додають вафлі, пісочне печиво або савоярді.
+            Морозиво найкраще обрати класичне біле або крем-брюле. Довершують композицію листочками м’яти,
+            безе чи подрібненими горіхами.</p>
+        </div>
+
+        <p><img class="banana_pudding" src="/static/images/First_page/завантаження.jpg" align=left width="35%" height="240" hspace="5"
+                alt="банановий пудинг з морозивом" ></p><br>
+          <div class="h_2">
+            <h2> Інгредієнти </h2>
+        </div>
+        <div class="tabl">
+            <table border="1" width="64%" >
+                <tr>
+                    <th>Банани</th>
+                    <th>2 шт.</th>
+                </tr>
+                <tr bgcolor="silver">
+                    <th>Молоко</th>
+                    <th>320 мл</th>
+                </tr>
+                <tr>
+                    <th>Борошно пшиничне</th>
+                    <th>3 ст.л.</th>
+                </tr>
+                <tr bgcolor="silver">
+                    <th>Яйце</th>
+                    <th>2 шт.</th>
+                </tr>
+                <tr>
+                    <th>Печиво пісочне</th>
+                    <th> 70 г</th>
+                </tr>
+                <tr bgcolor="silver">
+                    <th>Вершкове масло 82,5%</th>
+                    <th>1,5 ч. л.</th>
+                </tr>
+                <tr>
+                    <th>Цукор</th>
+                    <th>80 г</th>
+                </tr>
+                <tr bgcolor="silver">
+                    <th>Ванільний цукор</th>
+                    <th>2 г</th>
+                </tr>
+                <tr>
+                    <th>"100% морозиво"</th>
+                    <th>100 г</th>
+                </tr>
+
+            </table>
+        </div>
+        <div class="h_2">
+            <h2>Приготування</h2>
+        </div>
+
+        <ol>
+        <li>1. У невелику каструлю наливаємо молоко та насипаємо просіяне через сито борошно.</li>
+        <li>2. За допомогою міксера збиваємо муку та молоко до повного розчинення грудочок.</li>
+        <li>3. Відділяємо жовтки від білків. Поміщаємо жовтки в окрему миску, додаємо звичайний та ванільний цукор.
+            Перемішуємо.</li>
+        <li>4. Перекладаємо цукрово-яєчну масу до суміші борошна та молока. Збиваємо до однорідної консистенції.</li>
+        <li>5. Ставимо каструлю на слабкий вогонь та нагріваємо суміш 2–3 хвилини, постійно помішуючи.</li>
+        <li>6. Коли маса загусне, знімаємо каструлю з вогню. До суміші додаємо вершкове масло та перемішуємо.
+            Чекаємо, поки суміш охолоне.</li>
+        <li>7. Один банан ріжемо на шматочки та перекладаємо в чашу блендера.
+            Викладаємо частину пудингу з каструлі та подрібнюємо інгредієнти протягом кількох хвилин —
+            до кремової консистенції.</li>
+        <li>8. Банан, який залишився, нарізаємо кружальцями, печиво ламаємо невеличкими шматочками.</li>
+        <li>9. На дно креманок викладаємо банани та печиво, зверху — шар пудингу та кульку морозива.
+            Повторюємо послідовність до повного наповнення склянок. </li>
+        <li>10. Залишаємо пудинг у холодильнику на кілька годин.</li>
+    </ol>
+
+
+    </main>
+
+    <aside class="aside_right">
+            <h3> Рецепти з:</h3>
+            <ul>
+                <li class="logo">Абрикосів<span class="logo">&gtcc;</span>
+                    <ul>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1421" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://www.unian.ua/recipes/preservation-and-pickling/jams-and-preserves/shcho-prigotuvati-z-abrikosiv-recepti-varennya-piroga-i-keksu-11480101.html" target="_blank" > Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo"> Ананнасів <span class="logo">&gtcc;</span>
+                    <ul>
+                        <li><a href="https://klopotenko.com/ingredient/ananas-uk/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://cookorama.net/uk/ingredient/%D0%B0%D0%BD%D0%B0%D0%BD%D0%B0%D1%81%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%81%D0%B5%D1%80%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D1%96/" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Апельсинів <span class="logo">&gtcc;</span>
+                    <ul>
+                        <li><a href="https://klopotenko.com/ingredient/apelsin-uk/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://food.obozrevatel.com/ukr/ingredients/apelsin/" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Бананів <span class="logo">&gtcc;</span>
+                    <ul>
+                        <li><a href="https://lasunka.com/blog/shvydki-deserty-12-retseptiv-z-bananamy/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://food.obozrevatel.com/ukr/ingredients/banan/" target="_blank">Заглушка</a> </li>
+                    </ul>
+
+                </li>
+                <li class="logo">Винограду <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1429" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://klopotenko.com/ingredient/vinograd-uk-2/" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Вишень <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1423" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://klopotenko.com/ingredient/vishnya-uk/" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Груш <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1428" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://klopotenko.com/smachni-retsepty-z-hrusheyu-vid-salatu-do-pyroha/" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Персиків <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://klopotenko.com/smachni-retsepty-z-persykom-hotuyemo-vid-salatu-do-tarta/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1422" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Полуниць <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://klopotenko.com/ingredient/polunitsya/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://cookpad.com/ua/search/%D1%81%D1%82%D1%80%D0%B0%D0%B2%D0%B8%20%D0%B7%20%D0%BF%D0%BE%D0%BB%D1%83%D0%BD%D0%B8%D1%86%D0%B5%D1%8E" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Мандаринів <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://klopotenko.com/ingredient/mandarin-uk/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1512" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Малини <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://klopotenko.com/ingredient/malina-uk/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1427" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Слив <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://www.russianfood.com/recipes/bytype/?fid=1424" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://1000.menu/catalog/iz-sliv" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Ківі <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://1000.menu/catalog/iz-kivi" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://cookorama.net/uk/ingredient/%D0%BA%D1%96%D0%B2%D1%96/" target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+                <li class="logo">Яблук <span class="logo">&gtcc;</span>
+                     <ul>
+                        <li><a href="https://kolizhanka.com.ua/stravy-z-yabluk-30-riznomanitnyh-retseptiv-z-yablukamy-na-kozhen-den/" target="_blank">Заглушка</a> </li>
+                        <li><a href="https://cookorama.net/uk/tag/%D1%8F%D0%B1%D0%BB%D1%83%D0%BA%D0%B0/"  target="_blank">Заглушка</a> </li>
+                    </ul>
+                </li>
+            </ul>
+    </aside>
+    <div id="right_pattern"></div>
+</div>
+
+{% endblock content %}
