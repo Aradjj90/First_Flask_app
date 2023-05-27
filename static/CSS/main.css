@@ -1,0 +1,83 @@
+.page{
+display: flex; /*Дозволяє розмістити 2 asida*/
+margin-top: 15px;
+}
+
+.h_2{
+    color: blue;
+    font-family:Monotype Corsiva, Tahoma, Arial;
+    text-align: center;
+}
+
+.banana_pudding{
+    border: 2px solid silver;
+    border-radius: 2.5%;
+}
+
+
+table {
+    margin-left: 35% ;
+    border-radius: 1%;
+}
+
+.aside_left{
+    background: #fff url('/static/images/First_page/aside1.jpg');
+    background-size:contain;
+
+}
+
+#right_pattern{
+    width: 4%;
+    background: #fff url('/static/images/First_page/aside1.jpg'); /*Без імені.png*/
+    background-size:contain;
+}
+
+.aside_right{
+    width: 16%;
+    float:right;
+    padding: 1%;
+
+}
+
+.aside_right h3{
+    padding: 5px;
+    font-family:Monotype Corsiva, Tahoma, Arial;
+}
+
+
+.aside_right ul{
+    position: relative;
+    top: -0.5px;
+    font-family:Luminari, cursive;
+}
+
+.aside_right ul li{
+    font-size: 16px;
+    padding: 3px;
+    margin: 0 0 4px;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,.2);
+/*transition: .2s;*/
+}
+
+
+.aside_right ul li ul{
+    position: absolute;
+    left: 102%;
+    display: none; /*??? до появи 2 меню */
+}
+
+.aside_right ul li ul li{
+    font-size: 14px;
+    width: 80px;
+}
+
+.aside_right ul li:hover > ul{
+    display: initial;
+}
+
+
+.aside_left{
+    width: 4%;
+    float:left;
+}
